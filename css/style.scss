@@ -85,8 +85,8 @@ body {
   flex-direction: column;
   padding-left: 15px;
   padding-right: 15px;
-  @include adaptiv-value("padding-bottom", 50, 25, 1);
-  @include adaptiv-value("padding-top", 50, 25, 1);
+  @include adaptiv-value("padding-bottom", 50, 24, 1);
+  @include adaptiv-value("padding-top", 50, 24, 1);
 }
 
 .form__title {

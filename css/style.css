@@ -72,13 +72,13 @@ body {
 
 @media (max-width: 620px) {
   .form__body {
-    padding-bottom: calc( 25px + 25 * ((100vw - 320px) / 300));
+    padding-bottom: calc( 24px + 26 * ((100vw - 320px) / 300));
   }
 }
 
 @media (max-width: 620px) {
   .form__body {
-    padding-top: calc( 25px + 25 * ((100vw - 320px) / 300));
+    padding-top: calc( 24px + 26 * ((100vw - 320px) / 300));
   }
 }
 
