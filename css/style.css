@@ -155,13 +155,13 @@ body {
 
 .form__result span {
   width: 100%;
-  font-size: 110px;
+  font-size: 100px;
   color: #7a956b;
 }
 
 @media (max-width: 620px) {
   .form__result span {
-    font-size: calc( 100px + 10 * ((100vw - 320px) / 300));
+    font-size: calc( 55px + 45 * ((100vw - 320px) / 300));
   }
 }
 

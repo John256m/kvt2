@@ -137,7 +137,7 @@ body {
 .form__result span {
   width: 100%;
   //font-size: 130px;
-  @include adaptiv-value("font-size", 110, 100, 1);
+  @include adaptiv-value("font-size", 100, 55, 1);
   color: #7a956b;
 }
 .form__button {
