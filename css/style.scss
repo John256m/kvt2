@@ -1,5 +1,5 @@
 $maxWidth: 1920;
-$maxWidthContainer: 620;
+$maxWidthContainer: 560;
 
 @mixin adaptiv-value($property, $startSize, $minSize, $type) {
   $addSize: $startSize - $minSize;
@@ -67,7 +67,12 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 /* ------------------ */
-
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
 .form {
   max-width: $maxWidthContainer + px;
   margin: 0px auto;
@@ -80,17 +85,18 @@ body {
 
 .form__body {
   position: relative;
-  min-height: 100vh;
+  //min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding-left: 15px;
   padding-right: 15px;
-  @include adaptiv-value("padding-bottom", 50, 24, 1);
-  @include adaptiv-value("padding-top", 50, 24, 1);
+
+  @include adaptiv-value("padding-bottom", 40, 24, 1);
+  @include adaptiv-value("padding-top", 40, 24, 1);
 }
 
 .form__title {
-  @include adaptiv-value("font-size", 40, 24, 1);
+  @include adaptiv-value("font-size", 38, 24, 1);
 
   //  font-size: 40px;
   font-weight: 700;
@@ -119,7 +125,7 @@ body {
   @include adaptiv-value("font-size", 40, 24, 1);
   //font-size: 40px;
 
-  line-height: 180%;
+  line-height: 150%;
   transition: all 0.5s ease 0s;
 }
 
@@ -137,18 +143,19 @@ body {
 .form__result span {
   width: 100%;
   //font-size: 130px;
-  @include adaptiv-value("font-size", 100, 55, 1);
+  @include adaptiv-value("font-size", 80, 55, 1);
   color: #7a956b;
 }
 .form__button {
-  width: 100%;
+  width: 80%;
+  align-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
   @include adaptiv-value("font-size", 25, 14, 1);
   //font-size: 25px;
 
-  @include adaptiv-value("min-height", 80, 48, 1);
+  @include adaptiv-value("min-height", 60, 42, 1);
   //min-height: 80px;
   background-color: #7a956b;
   color: #fff;
