@@ -174,7 +174,7 @@ body {
 
 @media (max-width: 560px) {
   .form__result span {
-    font-size: calc( 55px + 25 * ((100vw - 320px) / 240));
+    font-size: calc( 40px + 40 * ((100vw - 320px) / 240));
   }
 }
 
@@ -217,7 +217,7 @@ body {
 
 @media (max-width: 560px) {
   .form__button {
-    min-height: calc( 42px + 18 * ((100vw - 320px) / 240));
+    min-height: calc( 40px + 20 * ((100vw - 320px) / 240));
   }
 }
 

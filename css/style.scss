@@ -143,7 +143,7 @@ body {
 .form__result span {
   width: 100%;
   //font-size: 130px;
-  @include adaptiv-value("font-size", 80, 55, 1);
+  @include adaptiv-value("font-size", 80, 40, 1);
   color: #7a956b;
 }
 .form__button {
@@ -155,7 +155,7 @@ body {
   @include adaptiv-value("font-size", 25, 14, 1);
   //font-size: 25px;
 
-  @include adaptiv-value("min-height", 60, 42, 1);
+  @include adaptiv-value("min-height", 60, 40, 1);
   //min-height: 80px;
   background-color: #7a956b;
   color: #fff;
