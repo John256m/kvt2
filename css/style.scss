@@ -138,8 +138,11 @@ body {
 
 .form__result {
   text-align: center;
-  padding: 20px 0px;
+  //padding: 20px 0px;
+  @include adaptiv-value("padding-top", 20, 10, 1);
+  @include adaptiv-value("padding-bottom", 20, 10, 1);
 }
+
 .form__result span {
   width: 100%;
   //font-size: 130px;
