@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/select.css">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Расчет потребления</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="form">
+				<form action="#" id="form" class="form__body">
+					<h1 class="form__title">Расчет потребления ресурсов</h1>
+					<div class="form__item">
+						<label for="formval" class="form__label">Начальное значение кВт:</label>
+						<input id="formval" type="text" name="val" class="form__input _req">
+					</div>
+					<div class="form__item">
+						<label for="formRast" class="form__label">Расстояние:</label>
+						<input id="formRast" type="text" name="rast" class="form__input _req ">
+					</div>
+					
+					<div class="form__item item__last">
+						<label for="formVal2" class="form__label">Второе значение кВт:</label>
+						<input id="formVal2" type="text" name="Val2" class="form__input _req ">
+					</div>
+					<div class="form__result">
+						<span id="resulttext" class="form__resulttext">0</span>
+					</div>
+
+					
+					<button type="submit" class="form__button">Расчет</button>
+				</form>
+			</div>
+		</div>
+	
+		<script src="js/script.js"></script>
+	</body>
+</html>
