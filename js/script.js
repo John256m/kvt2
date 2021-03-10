@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		
 		if (error === 0) {
 			
-			var kvt = document.getElementById('formval').value;
-			var rast = document.getElementById('formRast').value;
-			var kvt2 = document.getElementById('formVal2').value;
+			var kvt = document.getElementById('formval').value.replace(/,/, '.');
+			var rast = document.getElementById('formRast').value.replace(/,/, '.');
+			var kvt2 = document.getElementById('formVal2').value.replace(/,/, '.');
 
 			document.getElementById('resulttext').innerHTML= (kvt2*rast/kvt).toFixed(2);
 			//Str(Number(kvt)-Number(kvt2));
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	function numberTest(input) {
-		return !/^[0-9]*[.]?[0-9]*$/.test(input.value);
+		return !/^[0-9]*[.,]?[0-9]*$/.test(input.value);
 	}
 
 	//Получаем инпут file в переменную
