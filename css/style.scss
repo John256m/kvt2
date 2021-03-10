@@ -145,6 +145,7 @@ body {
 
 .form__result span {
   width: 100%;
+  word-wrap: break-word;
   //font-size: 130px;
   @include adaptiv-value("font-size", 80, 40, 1);
   color: #7a956b;

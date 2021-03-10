@@ -163,11 +163,25 @@ body {
 
 .form__result {
   text-align: center;
-  padding: 20px 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 560px) {
+  .form__result {
+    padding-top: calc( 10px + 10 * ((100vw - 320px) / 240));
+  }
+}
+
+@media (max-width: 560px) {
+  .form__result {
+    padding-bottom: calc( 10px + 10 * ((100vw - 320px) / 240));
+  }
 }
 
 .form__result span {
   width: 100%;
+  word-wrap: break-word;
   font-size: 80px;
   color: #7a956b;
 }
