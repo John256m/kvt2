@@ -74,7 +74,9 @@ body {
   justify-content: center;
 }
 .form {
-  max-width: $maxWidthContainer + px;
+  //max-width: $maxWidthContainer + px;
+
+  @include adaptiv-value("max-width", $maxWidthContainer, 320, 1);
   margin: 0px auto;
   color: #fff;
 }
@@ -130,14 +132,26 @@ body {
 }
 
 .form__input:focus {
-  box-shadow: 0 0 15px #7a956b;
+  box-shadow: 0 0 15px #8adb5e;
 }
 .form__input._error {
-  box-shadow: 0 0 15px red;
+  box-shadow: 0 0 15px 5px rgb(230, 20, 20);
+}
+
+.form__item span {
+  @include adaptiv-value("font-size", 20, 14, 1);
+  color: rgb(230, 20, 20);
+  display: none;
+  margin: 10px 15px -10px 15px;
+}
+
+.form__item._error span {
+  display: block;
 }
 
 .form__result {
   text-align: center;
+
   //padding: 20px 0px;
   @include adaptiv-value("padding-top", 20, 10, 1);
   @include adaptiv-value("padding-bottom", 20, 10, 1);
@@ -150,6 +164,11 @@ body {
   @include adaptiv-value("font-size", 80, 40, 1);
   color: #7a956b;
 }
+
+span._error {
+  color: rgb(230, 20, 20);
+}
+
 .form__button {
   width: 80%;
   align-self: center;

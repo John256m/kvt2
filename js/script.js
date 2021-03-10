@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			//Str(Number(kvt)-Number(kvt2));
 
 		} else {
-			alert('Заполните обязательные поля');
+			//alert('Заполните обязательные поля');
+			document.getElementById('resulttext').classList.add('_error');
+			document.getElementById('resulttext').innerHTML= "---"
 		}
 
 	}
@@ -32,10 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	function formValidate(form) {
 		let error = 0;
 		let formReq = document.querySelectorAll('._req');
+		document.getElementById('resulttext').classList.remove('_error');
 
 		for (let index = 0; index < formReq.length; index++) {
 			const input = formReq[index];
 			formRemoveError(input);
+			
 
 			if (input.classList.contains('_email')) {
 				if (emailTest(input)) {
@@ -49,7 +53,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (input.value === '') {
 					formAddError(input);
 					error++;
+					
+
 				}
+
 			}
 		}
 		return error;
@@ -57,11 +64,16 @@ document.addEventListener('DOMContentLoaded', function () {
 	function formAddError(input) {
 		input.parentElement.classList.add('_error');
 		input.classList.add('_error');
+		//let restxt = document.getElementById('resulttext');
+		
 	}
 	function formRemoveError(input) {
 		input.parentElement.classList.remove('_error');
 		input.classList.remove('_error');
+		
+
 	}
+
 	//Функция теста email
 	function emailTest(input) {
 		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
